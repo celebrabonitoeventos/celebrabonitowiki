@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paletas de Color por Estación del Año</title>
+  <style>
+    :root{ --bg:#fafafa; --text:#111; --shadow:rgba(0,0,0,.15); }
+    *{box-sizing:border-box}
+    body { font-family: Arial, sans-serif; padding: 24px; background:var(--bg); color:var(--text); }
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    h1{margin:0 0 4px 0}
+    .legend{font-size:13px;opacity:.85}
+    h2{margin:40px 0 12px}
+    .section-note{margin:-6px 0 14px; font-size:12px; opacity:.8}
+    .group{border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; padding:16px; box-shadow:0 2px 8px var(--shadow); margin-bottom:26px}
+    .palette { margin:14px 0 8px; display:flex; flex-wrap:wrap; gap:10px; }
+    .swatch {
+      display:inline-block; width:170px; height:120px; border-radius:8px;
+      color:#fff; text-align:center; font-size:11px; font-weight:700; line-height:1.25;
+      padding:12px 10px 10px; box-shadow:0 2px 6px var(--shadow); position:relative;
+    }
+    .swatch .hex{display:block; margin-top:6px; font-weight:700}
+    .swatch .label{display:block; margin-top:6px; font-weight:600}
+    .swatch .pct{position:absolute; right:8px; bottom:8px; font-weight:700; opacity:.9}
+    .light{color:#000}
+    .chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;margin-left:6px;border:1px solid rgba(0,0,0,.08);background:#fff}
+    /* Segunda página */
+    .page-break{page-break-before: always; margin-top:20px;}
+    .tips{display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:8px}
+    .card{border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; padding:14px; box-shadow:0 2px 8px var(--shadow);}
+    .card h3{margin:0 0 6px; font-size:16px}
+    .pill{display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; border:1px solid rgba(0,0,0,.1); background:#f7f7f7; margin-right:6px}
+    ul{margin:8px 0 0 18px; padding:0}
+    li{margin:4px 0}
+    /* Tercera página */
+    .montaje{border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; padding:18px; box-shadow:0 2px 8px var(--shadow); margin-bottom:26px}
+    .montaje h3{margin:0 0 6px; font-size:18px}
+    .montaje ul{margin-top:6px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🎨 Paletas por Estación del Año</h1>
+    <div class="legend">Incluye: Paletas – Recomendaciones – Ejemplos de Montaje</div>
+  </div>
+</header>
+
+<!-- ===================== PRIMERA PÁGINA: PALETAS ===================== -->
+<h2>🌸 Primavera</h2>
+<div class="group">
+  <div class="palette">
+    <div class="swatch light" style="background:#FFF8F0">Base<span class="hex">#FFF8F0</span><span class="label">Crema floral</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#B8E1C6">Secundario<span class="hex">#B8E1C6</span><span class="label">Menta</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#F7C8E0">Acento<span class="hex">#F7C8E0</span><span class="label">Rosa pastel</span><span class="pct">10%</span></div>
+    <div class="swatch light" style="background:#E6C200">Extra<span class="hex">#E6C200</span><span class="label">Dorado tenue</span></div>
+  </div>
+</div>
+
+<h2>☀️ Verano</h2>
+<div class="group">
+  <div class="palette">
+    <div class="swatch light" style="background:#F2FBFF">Base<span class="hex">#F2FBFF</span><span class="label">Blanco cielo</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#00C2CB">Secundario<span class="hex">#00C2CB</span><span class="label">Turquesa</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#FFD93D">Acento<span class="hex">#FFD93D</span><span class="label">Amarillo sol</span><span class="pct">10%</span></div>
+    <div class="swatch" style="background:#1E88E5">Extra<span class="hex">#1E88E5</span><span class="label">Azul eléctrico</span></div>
+  </div>
+</div>
+
+<h2>🍂 Otoño</h2>
+<div class="group">
+  <div class="palette">
+    <div class="swatch" style="background:#2E3A31">Base<span class="hex">#2E3A31</span><span class="label">Bosque</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#A65E4A">Secundario<span class="hex">#A65E4A</span><span class="label">Terracota</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#EEE5DA">Acento<span class="hex">#EEE5DA</span><span class="label">Marfil cálido</span><span class="pct">10%</span></div>
+    <div class="swatch" style="background:#D4AF37">Extra<span class="hex">#D4AF37</span><span class="label">Dorado</span></div>
+  </div>
+</div>
+
+<h2>❄️ Invierno</h2>
+<div class="group">
+  <div class="palette">
+    <div class="swatch light" style="background:#FFFFFF">Base<span class="hex">#FFFFFF</span><span class="label">Nieve</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#B0BEC5">Secundario<span class="hex">#B0BEC5</span><span class="label">Gris plata</span><span class="pct">20%</span></div>
+    <div class="swatch" style="background:#1A2A6C">Acento<span class="hex">#1A2A6C</span><span class="label">Marino</span><span class="pct">10%</span></div>
+    <div class="swatch" style="background:#C0C0C0">Extra<span class="hex">#C0C0C0</span><span class="label">Plata</span></div>
+  </div>
+</div>
+
+<!-- ===================== SEGUNDA PÁGINA: RECOMENDACIONES ===================== -->
+<div class="page-break"></div>
+<h2>🧭 Recomendaciones por Estación</h2>
+<p class="section-note">Guía para aplicar Base / Secundario / Acento / Extra.</p>
+<div class="group">
+  <h3>🌸 Primavera</h3>
+  <ul>
+    <li><b>Base:</b> manteles, backdrops claros.</li>
+    <li><b>Secundario:</b> follaje (menta, lavanda).</li>
+    <li><b>Acento:</b> servilletas, flores rosas.</li>
+    <li><b>Extra:</b> dorado en cubiertos/candelabros.</li>
+  </ul>
+</div>
+<div class="group">
+  <h3>☀️ Verano</h3>
+  <ul>
+    <li><b>Base:</b> carpas y mantelería ligera blanca.</li>
+    <li><b>Secundario:</b> turquesa en caminos y cojines.</li>
+    <li><b>Acento:</b> flores amarillas, servilletas.</li>
+    <li><b>Extra:</b> azul eléctrico en señalética.</li>
+  </ul>
+</div>
+<div class="group">
+  <h3>🍂 Otoño</h3>
+  <ul>
+    <li><b>Base:</b> madera, tonos bosque.</li>
+    <li><b>Secundario:</b> terracota en velas y bases.</li>
+    <li><b>Acento:</b> marfil cálido en servilletas.</li>
+    <li><b>Extra:</b> dorado en vajilla.</li>
+  </ul>
+</div>
+<div class="group">
+  <h3>❄️ Invierno</h3>
+  <ul>
+    <li><b>Base:</b> manteles blancos, fondos de tela.</li>
+    <li><b>Secundario:</b> gris plata en caminos.</li>
+    <li><b>Acento:</b> azul marino en detalles.</li>
+    <li><b>Extra:</b> plata en cristalería.</li>
+  </ul>
+</div>
+
+<!-- ===================== TERCERA PÁGINA: EJEMPLOS DE MONTAJE ===================== -->
+<div class="page-break"></div>
+<h2>🪑 Ejemplos de Montaje por Estación</h2>
+<p class="section-note">Cada lista es un ejemplo práctico para un evento con esa paleta.</p>
+
+<div class="montaje">
+  <h3>🌸 Primavera – Jardín Pastel</h3>
+  <ul>
+    <li><b>Mantel:</b> crema floral (#FFF8F0).</li>
+    <li><b>Camino:</b> verde menta (#B8E1C6).</li>
+    <li><b>Sillas:</b> madera clara con cojín blanco.</li>
+    <li><b>Servilletas:</b> rosa pastel (#F7C8E0).</li>
+    <li><b>Flor principal:</b> peonías rosas + eucalipto.</li>
+    <li><b>Flor secundaria:</b> lavanda.</li>
+    <li><b>Vajilla:</b> blanca con filo dorado tenue.</li>
+    <li><b>Iluminación:</b> cálida tenue, velas doradas.</li>
+  </ul>
+</div>
+
+<div class="montaje">
+  <h3>☀️ Verano – Costa Turquesa</h3>
+  <ul>
+    <li><b>Mantel:</b> blanco cielo (#F2FBFF).</li>
+    <li><b>Camino:</b> turquesa (#00C2CB).</li>
+    <li><b>Sillas:</b> crossback madera clara.</li>
+    <li><b>Servilletas:</b> amarillo sol (#FFD93D).</li>
+    <li><b>Flor principal:</b> girasoles.</li>
+    <li><b>Flor secundaria:</b> margaritas blancas.</li>
+    <li><b>Vajilla:</b> porcelana blanca + vasos aqua.</li>
+    <li><b>Iluminación:</b> guirnaldas festivas.</li>
+  </ul>
+</div>
+
+<div class="montaje">
+  <h3>🍂 Otoño – Bosque & Terracota</h3>
+  <ul>
+    <li><b>Mantel:</b> lino verde bosque (#2E3A31).</li>
+    <li><b>Camino:</b> terracota (#A65E4A).</li>
+    <li><b>Sillas:</b> madera oscura.</li>
+    <li><b>Servilletas:</b> marfil cálido (#EEE5DA).</li>
+    <li><b>Flor principal:</b> dahlias vino y pampas.</li>
+    <li><b>Flor secundaria:</b> follaje seco.</li>
+    <li><b>Vajilla:</b> cerámica beige con filo dorado.</li>
+    <li><b>Iluminación:</b> faroles dorados y velas ámbar.</li>
+  </ul>
+</div>
+
+<div class="montaje">
+  <h3>❄️ Invierno – Nórdico Minimal</h3>
+  <ul>
+    <li><b>Mantel:</b> blanco nieve (#FFFFFF).</li>
+    <li><b>Camino:</b> gris plata (#B0BEC5).</li>
+    <li><b>Sillas:</b> crossback blanca o ghost.</li>
+    <li><b>Servilletas:</b> azul marino (#1A2A6C).</li>
+    <li><b>Flor principal:</b> rosas blancas.</li>
+    <li><b>Flor secundaria:</b> eucalipto plateado.</li>
+    <li><b>Vajilla:</b> porcelana blanca + copas plata.</li>
+    <li><b>Iluminación:</b> fría (5000K) + velas cálidas.</li>
+  </ul>
+</div>
+
+</body>
+</html>
