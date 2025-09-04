@@ -2,300 +2,181 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Paletas de Color por Estación del Año</title>
+  <title>Paletas de Color por Estación (Extendido)</title>
   <style>
-    :root{ --bg:#fafafa; --text:#111; --shadow:rgba(0,0,0,.15); }
-    *{box-sizing:border-box}
-    body { font-family: Arial, sans-serif; padding: 24px; background:var(--bg); color:var(--text); }
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-    h1{margin:0 0 4px 0}
-    .legend{font-size:13px;opacity:.85}
-    h2{margin:40px 0 12px}
-    .section-note{margin:-6px 0 14px; font-size:12px; opacity:.8}
-    .group{border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; padding:16px; box-shadow:0 2px 8px var(--shadow); margin-bottom:26px}
-    .palette { margin:14px 0 8px; display:flex; flex-wrap:wrap; gap:10px; }
-    .swatch {
-      display:inline-block; width:170px; height:120px; border-radius:8px;
-      color:#fff; text-align:center; font-size:11px; font-weight:700; line-height:1.25;
-      padding:12px 10px 10px; box-shadow:0 2px 6px var(--shadow); position:relative;
-    }
-    .swatch .hex{display:block; margin-top:6px; font-weight:700}
-    .swatch .label{display:block; margin-top:6px; font-weight:600}
-    .swatch .pct{position:absolute; right:8px; bottom:8px; font-weight:700; opacity:.9}
-    .light{color:#000}
-    .chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;margin-left:6px;border:1px solid rgba(0,0,0,.08);background:#fff}
-    /* Segunda página */
-    .page-break{page-break-before: always; margin-top:20px;}
-    .tips{display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:8px}
-    .card{border:1px solid rgba(0,0,0,.08); border-radius:12px; background:#fff; padding:14px; box-shadow:0 2px 8px var(--shadow);}
-    .card h3{margin:0 0 6px; font-size:16px}
-    .pill{display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; border:1px solid rgba(0,0,0,.1); background:#f7f7f7; margin-right:6px}
-    ul{margin:8px 0 0 18px; padding:0}
-    li{margin:4px 0}
+    body { font-family: Arial, sans-serif; background:#fafafa; color:#111; padding:24px; }
+    h1 { margin:0 0 12px; }
+    h2 { margin:40px 0 12px; }
+    h3 { margin:0 0 6px; }
+    .group { border:1px solid #ddd; border-radius:12px; background:#fff; padding:16px; margin-bottom:28px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .palette { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+    .swatch { width:160px; height:110px; border-radius:8px; color:#fff; text-align:center; font-size:11px; font-weight:bold; line-height:1.25; padding:12px 10px; position:relative; box-shadow:0 2px 6px rgba(0,0,0,.2);}
+    .swatch.light { color:#000; }
+    .swatch .hex { display:block; margin-top:6px; font-weight:normal; }
+    .swatch .pct { position:absolute; bottom:8px; right:8px; font-size:11px; font-weight:bold; }
+    .page-break { page-break-before: always; margin-top:30px; }
+    .montaje { border:1px solid #ddd; border-radius:12px; background:#fff; padding:18px; margin-bottom:26px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+    .montaje h3 { margin-bottom:8px; }
+    .montaje ul { list-style: none; padding:0; margin:0; }
+    .montaje li { margin:6px 0; display:flex; align-items:center; gap:10px; }
+    .color-box { display:inline-block; width:18px; height:18px; border-radius:4px; border:1px solid #999; }
   </style>
 </head>
 <body>
 
-<header>
-  <div>
-    <h1>🎨 Paletas por Estación del Año</h1>
-    <div class="legend">Aplicación sugerida: <b>Base 70%</b> – <b>Secundario 20%</b> – <b>Acento 10%</b> <span class="chip">Extra/Metálico opcional</span></div>
-  </div>
-</header>
+<h1>🎨 Paletas de Color por Estación (Extendido)</h1>
+<p><b>Formato:</b> Base 70% – Secundario 20% – Acento 10% + Extra opcional.</p>
 
 <!-- ===================== PRIMAVERA ===================== -->
 <h2>🌸 Primavera</h2>
 <div class="group">
-  <!-- PRIMAVERA A: Jardín Pastel -->
+  <h3>Combinación A – Jardín Pastel</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FFF8F0">Base<span class="hex">#FFF8F0</span><span class="label">Crema floral</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#B8E1C6">Secundario<span class="hex">#B8E1C6</span><span class="label">Verde menta</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#F7C8E0">Acento<span class="hex">#F7C8E0</span><span class="label">Rosa pastel</span><span class="pct">10%</span></div>
-    <div class="swatch light" style="background:#E6C200">Extra<span class="hex">#E6C200</span><span class="label">Dorado tenue</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FFF8F0">Base<span class="hex">#FFF8F0</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#B8E1C6">Secundario<span class="hex">#B8E1C6</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#F7C8E0">Acento<span class="hex">#F7C8E0</span><span class="pct">10%</span></div>
   </div>
-  <!-- PRIMAVERA B: Lavanda & Salvia -->
+  <h3>Combinación B – Lavanda & Salvia</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FAFAFA">Base<span class="hex">#FAFAFA</span><span class="label">Blanco perla</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#C1BBDD">Secundario<span class="hex">#C1BBDD</span><span class="label">Lavanda</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#9CAF88">Acento<span class="hex">#9CAF88</span><span class="label">Verde salvia</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#C0C0C0">Extra<span class="hex">#C0C0C0</span><span class="label">Plata</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FAFAFA">Base<span class="hex">#FAFAFA</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#C1BBDD">Secundario<span class="hex">#C1BBDD</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#9CAF88">Acento<span class="hex">#9CAF88</span><span class="pct">10%</span></div>
   </div>
-  <!-- PRIMAVERA C: Melocotón Suave -->
+  <h3>Combinación C – Melocotón Suave</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FFF4EC">Base<span class="hex">#FFF4EC</span><span class="label">Crema melocotón</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#FFBE98">Secundario<span class="hex">#FFBE98</span><span class="label">Peach</span><span class="pct">20%</span></div>
-    <div class="swatch" style="background:#6B8E23">Acento<span class="hex">#6B8E23</span><span class="label">Eucalipto</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#D4B483">Extra<span class="hex">#D4B483</span><span class="label">Champagne</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FFF4EC">Base<span class="hex">#FFF4EC</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#FFBE98">Secundario<span class="hex">#FFBE98</span><span class="pct">20%</span></div>
+    <div class="swatch" style="background:#6B8E23">Acento<span class="hex">#6B8E23</span><span class="pct">10%</span></div>
   </div>
 </div>
 
 <!-- ===================== VERANO ===================== -->
 <h2>☀️ Verano</h2>
 <div class="group">
-  <!-- VERANO A: Costa Turquesa -->
+  <h3>Combinación A – Costa Turquesa</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#F2FBFF">Base<span class="hex">#F2FBFF</span><span class="label">Blanco cielo</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#00C2CB">Secundario<span class="hex">#00C2CB</span><span class="label">Turquesa</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#FFD93D">Acento<span class="hex">#FFD93D</span><span class="label">Amarillo sol</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#1E88E5">Extra<span class="hex">#1E88E5</span><span class="label">Azul eléctrico</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#F2FBFF">Base<span class="hex">#F2FBFF</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#00C2CB">Secundario<span class="hex">#00C2CB</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#FFD93D">Acento<span class="hex">#FFD93D</span><span class="pct">10%</span></div>
   </div>
-  <!-- VERANO B: Coral & Arena -->
+  <h3>Combinación B – Coral & Arena</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FFF5E6">Base<span class="hex">#FFF5E6</span><span class="label">Marfil cálido</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#FF914D">Secundario<span class="hex">#FF914D</span><span class="label">Naranja mango</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#EED9C4">Acento<span class="hex">#EED9C4</span><span class="label">Arena</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#006C67">Extra<span class="hex">#006C67</span><span class="label">Verde mar profundo</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FFF5E6">Base<span class="hex">#FFF5E6</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#FF914D">Secundario<span class="hex">#FF914D</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#EED9C4">Acento<span class="hex">#EED9C4</span><span class="pct">10%</span></div>
   </div>
-  <!-- VERANO C: Fruta Tropical -->
+  <h3>Combinación C – Fruta Tropical</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FFFFFF">Base<span class="hex">#FFFFFF</span><span class="label">Blanco</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#A3EB78">Secundario<span class="hex">#A3EB78</span><span class="label">Verde limón</span><span class="pct">20%</span></div>
-    <div class="swatch" style="background:#FF4C4C">Acento<span class="hex">#FF4C4C</span><span class="label">Rojo sandía</span><span class="pct">10%</span></div>
-    <div class="swatch light" style="background:#FAD1AF">Extra<span class="hex">#FAD1AF</span><span class="label">Melocotón claro</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FFFFFF">Base<span class="hex">#FFFFFF</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#A3EB78">Secundario<span class="hex">#A3EB78</span><span class="pct">20%</span></div>
+    <div class="swatch" style="background:#FF4C4C">Acento<span class="hex">#FF4C4C</span><span class="pct">10%</span></div>
   </div>
 </div>
 
 <!-- ===================== OTOÑO ===================== -->
 <h2>🍂 Otoño</h2>
 <div class="group">
-  <!-- OTOÑO A: Bosque & Terracota -->
+  <h3>Combinación A – Bosque & Terracota</h3>
   <div class="palette">
-    <div class="swatch" style="background:#2E3A31">Base<span class="hex">#2E3A31</span><span class="label">Verde bosque</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#A65E4A">Secundario<span class="hex">#A65E4A</span><span class="label">Terracota</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#EEE5DA">Acento<span class="hex">#EEE5DA</span><span class="label">Marfil cálido</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#D4AF37">Extra<span class="hex">#D4AF37</span><span class="label">Dorado metálico</span><span class="pct">—</span></div>
+    <div class="swatch" style="background:#2E3A31">Base<span class="hex">#2E3A31</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#A65E4A">Secundario<span class="hex">#A65E4A</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#EEE5DA">Acento<span class="hex">#EEE5DA</span><span class="pct">10%</span></div>
   </div>
-  <!-- OTOÑO B: Hojarasca Suave -->
+  <h3>Combinación B – Hojarasca Suave</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#E9D8A6">Base<span class="hex">#E9D8A6</span><span class="label">Beige trigo</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#8B5E3C">Secundario<span class="hex">#8B5E3C</span><span class="label">Madera</span><span class="pct">20%</span></div>
-    <div class="swatch" style="background:#6B8E23">Acento<span class="hex">#6B8E23</span><span class="label">Oliva</span><span class="pct">10%</span></div>
-    <div class="swatch light" style="background:#F5F5F5">Extra<span class="hex">#F5F5F5</span><span class="label">Blanco hueso</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#E9D8A6">Base<span class="hex">#E9D8A6</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#8B5E3C">Secundario<span class="hex">#8B5E3C</span><span class="pct">20%</span></div>
+    <div class="swatch" style="background:#6B8E23">Acento<span class="hex">#6B8E23</span><span class="pct">10%</span></div>
   </div>
-  <!-- OTOÑO C: Vino & Cacao -->
+  <h3>Combinación C – Vino & Cacao</h3>
   <div class="palette">
-    <div class="swatch" style="background:#4A2C2A">Base<span class="hex">#4A2C2A</span><span class="label">Cacao oscuro</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#8B0000">Secundario<span class="hex">#8B0000</span><span class="label">Rojo vino</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#EED9C4">Acento<span class="hex">#EED9C4</span><span class="label">Arena</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#C9A646">Extra<span class="hex">#C9A646</span><span class="label">Dorado lujo</span><span class="pct">—</span></div>
+    <div class="swatch" style="background:#4A2C2A">Base<span class="hex">#4A2C2A</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#8B0000">Secundario<span class="hex">#8B0000</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#EED9C4">Acento<span class="hex">#EED9C4</span><span class="pct">10%</span></div>
   </div>
 </div>
 
 <!-- ===================== INVIERNO ===================== -->
 <h2>❄️ Invierno</h2>
 <div class="group">
-  <!-- INVIERNO A: Nórdico Minimal -->
+  <h3>Combinación A – Nórdico Minimal</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FFFFFF">Base<span class="hex">#FFFFFF</span><span class="label">Blanco nieve</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#B0BEC5">Secundario<span class="hex">#B0BEC5</span><span class="label">Gris plata</span><span class="pct">20%</span></div>
-    <div class="swatch" style="background:#1A2A6C">Acento<span class="hex">#1A2A6C</span><span class="label">Azul marino</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#C0C0C0">Extra<span class="hex">#C0C0C0</span><span class="label">Plata</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FFFFFF">Base<span class="hex">#FFFFFF</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#B0BEC5">Secundario<span class="hex">#B0BEC5</span><span class="pct">20%</span></div>
+    <div class="swatch" style="background:#1A2A6C">Acento<span class="hex">#1A2A6C</span><span class="pct">10%</span></div>
   </div>
-  <!-- INVIERNO B: Carbón & Champagne -->
+  <h3>Combinación B – Carbón & Champagne</h3>
   <div class="palette">
-    <div class="swatch" style="background:#0A0A0A">Base<span class="hex">#0A0A0A</span><span class="label">Negro carbón</span><span class="pct">70%</span></div>
-    <div class="swatch light" style="background:#F5F5F5">Secundario<span class="hex">#F5F5F5</span><span class="label">Gris humo</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#D4B483">Acento<span class="hex">#D4B483</span><span class="label">Champagne</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#4B0082">Extra<span class="hex">#4B0082</span><span class="label">Morado profundo</span><span class="pct">—</span></div>
+    <div class="swatch" style="background:#0A0A0A">Base<span class="hex">#0A0A0A</span><span class="pct">70%</span></div>
+    <div class="swatch light" style="background:#F5F5F5">Secundario<span class="hex">#F5F5F5</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#D4B483">Acento<span class="hex">#D4B483</span><span class="pct">10%</span></div>
   </div>
-  <!-- INVIERNO C: Bosque Nevado -->
+  <h3>Combinación C – Bosque Nevado</h3>
   <div class="palette">
-    <div class="swatch light" style="background:#FAFAFA">Base<span class="hex">#FAFAFA</span><span class="label">Blanco perla</span><span class="pct">70%</span></div>
-    <div class="swatch" style="background:#2F4F4F">Secundario<span class="hex">#2F4F4F</span><span class="label">Verde abeto</span><span class="pct">20%</span></div>
-    <div class="swatch light" style="background:#E3F2ED">Acento<span class="hex">#E3F2ED</span><span class="label">Aqua helado</span><span class="pct">10%</span></div>
-    <div class="swatch" style="background:#FFD700">Extra<span class="hex">#FFD700</span><span class="label">Dorado brillante</span><span class="pct">—</span></div>
+    <div class="swatch light" style="background:#FAFAFA">Base<span class="hex">#FAFAFA</span><span class="pct">70%</span></div>
+    <div class="swatch" style="background:#2F4F4F">Secundario<span class="hex">#2F4F4F</span><span class="pct">20%</span></div>
+    <div class="swatch light" style="background:#E3F2ED">Acento<span class="hex">#E3F2ED</span><span class="pct">10%</span></div>
   </div>
 </div>
 
-<!-- ===================== SEGUNDA PÁGINA: RECOMENDACIONES ===================== -->
+<!-- ===================== MONTAJES ===================== -->
 <div class="page-break"></div>
-<h2>🧭 Recomendaciones de Aplicación por Estación</h2>
-<p class="section-note">Guía rápida para decidir dónde usar Base / Secundario / Acento / Extra en tu montaje (mantelería, mobiliario, flores, vajilla, iluminación, señalética).</p>
+<h2>🪑 Ejemplos de Montaje</h2>
 
-<!-- PRIMAVERA -->
-<div class="group">
-  <h3>🌸 Primavera</h3>
-  <div class="tips">
-    <div class="card">
-      <h3><span class="pill">Base 70%</span> Superficies & textiles</h3>
-      <ul>
-        <li>Manteles o caminos de mesa en <b>cremas</b> y <b>blancos perla</b>.</li>
-        <li>Backdrops de tela lisa o paneles de madera pintados en base clara.</li>
-        <li>Vajilla blanca/simple para no competir con flores.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Secundario 20%</span> Volumen visual</h3>
-      <ul>
-        <li>Follaje y arreglos en <b>menta/salvia</b> o <b>lavanda</b>.</li>
-        <li>Sillas (fundas o moños) y señalética.</li>
-        <li>Vidrio tintado suave (jarrones pastel).</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Acento 10%</span> Detalles wow</h3>
-      <ul>
-        <li>Ramos con <b>rosa pastel</b>, servilletas, listones.</li>
-        <li>Postres/mesa dulce con acentos de color.</li>
-        <li>Iluminación cálida suave (2700–3000K).</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Extra/Metálico</span> Realce</h3>
-      <ul>
-        <li><b>Dorado tenue/champagne</b> en candelabros, cubiertos, cargadores.</li>
-        <li>En lettering o marcos de carteles.</li>
-      </ul>
-    </div>
-  </div>
+<div class="montaje">
+  <h3>🌸 Primavera – Jardín Pastel</h3>
+  <ul>
+    <li>Mantel: crema floral <span class="color-box" style="background:#FFF8F0"></span></li>
+    <li>Camino: verde menta <span class="color-box" style="background:#B8E1C6"></span></li>
+    <li>Sillas: madera clara</li>
+    <li>Servilletas: rosa pastel <span class="color-box" style="background:#F7C8E0"></span></li>
+    <li>Flor principal: peonías rosas</li>
+    <li>Flor secundaria: lavanda</li>
+    <li>Vajilla: blanca filo dorado</li>
+    <li>Iluminación: cálida tenue</li>
+  </ul>
 </div>
 
-<!-- VERANO -->
-<div class="group">
-  <h3>☀️ Verano</h3>
-  <div class="tips">
-    <div class="card">
-      <h3><span class="pill">Base 70%</span></h3>
-      <ul>
-        <li>Blancos y marfiles en mantelería ligera (lino/algodón).</li>
-        <li>Sombrillas, carpas o backdrops claros para reflejar calor.</li>
-        <li>Vajilla blanca y cristalería transparente.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Secundario 20%</span></h3>
-      <ul>
-        <li><b>Turquesa / verde limón</b> en caminos de mesa, cojines lounge.</li>
-        <li>Arreglos con hojas grandes (monstera, palma).</li>
-        <li>Señalética playera o náutica.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Acento 10%</span></h3>
-      <ul>
-        <li><b>Amarillo sol / rojo sandía</b> en servilletas, flores puntuales.</li>
-        <li>Iluminación festiva (fairy lights, guirnaldas).</li>
-        <li>Postres/tragos de color (limonada rosa, mangonada).</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Extra/Metálico</span></h3>
-      <ul>
-        <li>Toques de <b>azul eléctrico</b> o metálicos discretos (plata pulida).</li>
-        <li>Vidrio aqua, botellones, dispensadores.</li>
-      </ul>
-    </div>
-  </div>
+<div class="montaje">
+  <h3>☀️ Verano – Costa Turquesa</h3>
+  <ul>
+    <li>Mantel: blanco cielo <span class="color-box" style="background:#F2FBFF"></span></li>
+    <li>Camino: turquesa <span class="color-box" style="background:#00C2CB"></span></li>
+    <li>Sillas: crossback madera clara</li>
+    <li>Servilletas: amarillo sol <span class="color-box" style="background:#FFD93D"></span></li>
+    <li>Flor principal: girasoles</li>
+    <li>Flor secundaria: margaritas</li>
+    <li>Vajilla: porcelana blanca</li>
+    <li>Iluminación: guirnaldas festivas</li>
+  </ul>
 </div>
 
-<!-- OTOÑO -->
-<div class="group">
-  <h3>🍂 Otoño</h3>
-  <div class="tips">
-    <div class="card">
-      <h3><span class="pill">Base 70%</span></h3>
-      <ul>
-        <li>Madera, beige trigo o <b>verde bosque</b> en fondos y mantelería rústica.</li>
-        <li>Texturas: yute, lino pesado, cerámica mate.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Secundario 20%</span></h3>
-      <ul>
-        <li><b>Terracota / madera</b> en caminos, velas, bases de centros.</li>
-        <li>Follaje seco: eucalipto, pampas, hojas rojizas.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Acento 10%</span></h3>
-      <ul>
-        <li><b>Oliva / arena</b> en servilletas, menús, cordeles.</li>
-        <li>Iluminación cálida ámbar (2200–2700K).</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Extra/Metálico</span></h3>
-      <ul>
-        <li><b>Dorado metálico</b> en candelabros, cubiertos, ribetes de vajilla.</li>
-        <li>Vidrio ámbar o humo.</li>
-      </ul>
-    </div>
-  </div>
+<div class="montaje">
+  <h3>🍂 Otoño – Bosque & Terracota</h3>
+  <ul>
+    <li>Mantel: verde bosque <span class="color-box" style="background:#2E3A31"></span></li>
+    <li>Camino: terracota <span class="color-box" style="background:#A65E4A"></span></li>
+    <li>Sillas: madera oscura</li>
+    <li>Servilletas: marfil cálido <span class="color-box" style="background:#EEE5DA"></span></li>
+    <li>Flor principal: dalias vino</li>
+    <li>Flor secundaria: pampas secas</li>
+    <li>Vajilla: cerámica beige</li>
+    <li>Iluminación: velas ámbar</li>
+  </ul>
 </div>
 
-<!-- INVIERNO -->
-<div class="group">
-  <h3>❄️ Invierno</h3>
-  <div class="tips">
-    <div class="card">
-      <h3><span class="pill">Base 70%</span></h3>
-      <ul>
-        <li><b>Blancos, grises</b> o <b>negro carbón</b> en manteles y backdrops elegantes.</li>
-        <li>Materiales: terciopelo, satín, porcelana blanca.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Secundario 20%</span></h3>
-      <ul>
-        <li><b>Gris plata / verde abeto</b> en caminos, cortinas, listones.</li>
-        <li>Cristalería corte diamante o vidrio escarchado.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Acento 10%</span></h3>
-      <ul>
-        <li><b>Azul marino / champagne / aqua helado</b> en servilletas, flores puntuales.</li>
-        <li>Iluminación fría controlada (4000–5000K) + velas cálidas para contraste.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="pill">Extra/Metálico</span></h3>
-      <ul>
-        <li><b>Plata / dorado brillante</b> en cubiertos, cargadores, marcos.</li>
-        <li>Detalles morado profundo para cenas de gala.</li>
-      </ul>
-    </div>
-  </div>
+<div class="montaje">
+  <h3>❄️ Invierno – Nórdico Minimal</h3>
+  <ul>
+    <li>Mantel: blanco nieve <span class="color-box" style="background:#FFFFFF"></span></li>
+    <li>Camino: gris plata <span class="color-box" style="background:#B0BEC5"></span></li>
+    <li>Sillas: ghost transparentes</li>
+    <li>Servilletas: azul marino <span class="color-box" style="background:#1A2A6C"></span></li>
+    <li>Flor principal: rosas blancas</li>
+    <li>Flor secundaria: eucalipto plateado</li>
+    <li>Vajilla: porcelana blanca + copas plata</li>
+    <li>Iluminación: fría + velas cálidas</li>
+  </ul>
 </div>
 
 </body>
